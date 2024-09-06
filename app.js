@@ -1,5 +1,5 @@
-// Your OpenWeatherMap API key
-const apiKey = fMxGZ84ppC5LOw1T9fCcYRjtteuWBrZU;
+// Your WeatherAPI.com API key
+const apiKey = '0433a80e18c54a0c807122134240609'; // Replace with your actual API key
 
 // Get references to HTML elements
 const searchButton = document.getElementById('search-button');
@@ -22,12 +22,12 @@ searchButton.addEventListener('click', () => {
 // Function to fetch weather data
 function getWeatherData(city) {
     // API URL with city and API key
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('City not found');
+                throw new Error('City not found or API error');
             }
             return response.json();
         })
@@ -41,8 +41,8 @@ function getWeatherData(city) {
 
 // Function to update the weather information on the page
 function updateWeatherInfo(data) {
-    cityName.textContent = `City: ${data.name}`;
-    temperature.textContent = `Temperature: ${data.main.temp} °C`;
-    humidity.textContent = `Humidity: ${data.main.humidity}%`;
-    conditions.textContent = `Conditions: ${data.weather[0].description}`;
+    cityName.textContent = `City: ${data.location.name}`;
+    temperature.textContent = `Temperature: ${data.current.temp_c} °C`;
+    humidity.textContent = `Humidity: ${data.current.humidity}%`;
+    conditions.textContent = `Conditions: ${data.current.condition.text}`;
 }

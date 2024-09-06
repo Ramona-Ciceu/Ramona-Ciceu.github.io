@@ -5,14 +5,14 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: https://www.novascotia.com/travel-info/weather;
 }
 
 .weather-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(224, 151, 218);
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -24,14 +24,14 @@ input, button {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #437dc9;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #f13417;
 }
 
 #weather-info {
