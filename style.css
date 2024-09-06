@@ -1,95 +1,39 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0px;
-    
-}
-#logo {
-  margin: 0px;
-  padding: 8px;
-  font-family: "Fredoka One", sans-serif;
-  box-shadow: 10px 10px 15px 5px #5C4033 ;
-  width: 18%;
-  height: 40%;
-  border-radius: 10%;
-  text-shadow: 
-  3px 3px 1px #006400,
-  -3px 3px 1px #006400,
-  3px -3px 1px #006400,
-  -3px -3px 1px #006400;
-
-}
-ul {
-    margin: 0px;
-}
-body > header {
-    background-color: orange;
-    color: white;
-    display: flex;
-    height: 12vw;
-    align-items: center;
-    justify-content: space-around;
-}
-#nav-ul{
-    display: flex;
-}
-#nav-ul > li {
-    padding: 8px;
-    margin: 16px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
- .navbutton {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
- }
-  body > main article {
-    width: 60%;
-    margin: auto;
-  }
-#main-content {
-    display: flex;
-}
-#main-content > div {
-    width: 70%;
-   justify-content: space-around;
-}
-  form{
-    text-align: center;
-  }
-h2 {
-    text-align: center;
-    font-size: 5vw;
-  }
-  p {
-    font-size: 0.8em;
-  }
-
-body > footer {
-    background-color : orange;
-    display: flex;
-
+.weather-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-
-img {
-    border-radius: 50%;
-}
-#footer-ul {
-    display: flex;
-    list-style: none;
-}
-#footer-ul > div > li {
-    margin-left: 12px;
-    
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-#footer-ul > div > li > a {
-    text-decoration: none;
-    color: white;
-    
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#weather-info {
+  margin-top: 20px;
 }

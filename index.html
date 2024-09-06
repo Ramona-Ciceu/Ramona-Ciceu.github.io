@@ -1,212 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&
-    display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightSite</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="main_header">
-      <!-- the content of the header goes here -->
-       <h1 id="logo">BrightBlog</h1>
-       <nav>
-        <ul id="nav-ul">
-            <li><a href="" class="navbutton">
-                    Home</a>
-            </li>
-            <li><a href="" class="navbutton">
-                    About us</a>
-            </li>
-            <li><a href="" class="navbutton">
-                    Contact</a>
-            </li>
-            
-        </ul>
-       </nav>
-    </header>
-   <main>
-    <div>
-        
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="search-button">Search</button>
+        <div id="weather-info">
+            <h2 id="city-name">City: </h2>
+            <p id="temperature">Temperature: </p>
+            <p id="humidity">Humidity: </p>
+            <p id="conditions">Conditions: </p>
+        </div>
     </div>
-    <div>
-        <article>
-            <header>
-                <!-- Article's header goes here -->
-                 <h2>All Amusing Facts About Dogs</h2>
-                 <h3>Read time: 100 minutes</h3>
-            
-            </header>
-            <main>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia asperiores quam maxime voluptatibus, optio, nam dolorem qui error architecto vero itaque vel corporis. Consequatur est nobis eius dolore voluptas fugit non sint sed sapiente fugiat vero in aut voluptate obcaecati eum, ipsum aperiam. Accusantium ab beatae incidunt sequi et optio error fugiat excepturi illum vero assumenda, tempore, ducimus voluptate, repellendus provident nobis ipsam. Eius ea vitae cupiditate sequi quidem ipsam. Praesentium repellat aperiam quasi iure deleniti sequi libero consectetur aut, necessitatibus nihil, veniam provident consequatur eos inventore minus illum tenetur totam quidem enim qui natus hic sit! Obcaecati, excepturi.</p>
-                <blockquote>
-                    <cite> "I love pupies!" - Ramona, 2024</cite>
-                </blockquote>
-                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni repellendus sequi cupiditate quod laudantium voluptatem quaerat cumque, ipsum voluptates quas dolore maxime quia ratione nesciunt mollitia, sunt hic numquam? Nulla, exercitationem dolores porro repellendus atque rerum vero nostrum temporibus odio ea tenetur provident est doloremque non a ipsam facilis quas velit adipisci, reiciendis harum impedit corporis vel. Neque repudiandae sapiente vero culpa dolores? Sit excepturi voluptatum quia voluptate maxime libero iure, corporis explicabo minima eveniet perferendis cum et quisquam officiis.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dicta incidunt ipsum, iure illo labore enim ullam ipsa modi rerum eos nisi illum nulla cum velit quae accusamus omnis asperiores nihil! Consectetur eius inventore distinctio eveniet quisquam quas aperiam voluptates nulla molestias fugit, voluptatem reiciendis impedit quis odio quae sint cum doloremque soluta minus? Temporibus eius cum reiciendis blanditiis delectus non fugiat velit? Ab et officia nihil maiores atque, ex voluptatem iusto sint alias, asperiores ipsam error hic. Sapiente pariatur adipisci nam deserunt recusandae ratione incidunt rerum cumque quisquam eius commodi aliquid, magni facilis nihil consequatur, odit, quasi at eaque in ea possimus quibusdam? Doloribus, quis tempora! Ad voluptatum temporibus suscipit obcaecati perspiciatis laudantium hic ut sunt, nisi nulla dignissimos odio repellendus, ea cumque magni eius quidem. Et consequuntur doloremque aut praesentium, deserunt dicta aliquid, numquam voluptatibus quae, officiis modi suscipit omnis sed enim? Officiis velit quia unde ad maxime.</p>
-    
-    
-            </main>
-            <footer>
-                <h2>Author: Ramona-Irina Ciceu </h2>
-                <img src="https://placebear.com/100/100" alt="A profile pic of the bear">
-                <h3>Last posted: 26 August 2024</h3>
-                <a href="https://www.linkedin.com/feed/" target="_blank">Author's Profile</a>
-            </footer>
-        </article>
-        <article>
-            <header>
-                <!-- Article's header goes here -->
-                 <h2>Ten Amusing Facts About Dogs</h2>
-                 <h3>Read time: 5 minutes</h3>
-            
-            </header>
-            <main>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia asperiores quam maxime voluptatibus, optio, nam dolorem qui error architecto vero itaque vel corporis. Consequatur est nobis eius dolore voluptas fugit non sint sed sapiente fugiat vero in aut voluptate obcaecati eum, ipsum aperiam. Accusantium ab beatae incidunt sequi et optio error fugiat excepturi illum vero assumenda, tempore, ducimus voluptate, repellendus provident nobis ipsam. Eius ea vitae cupiditate sequi quidem ipsam. Praesentium repellat aperiam quasi iure deleniti sequi libero consectetur aut, necessitatibus nihil, veniam provident consequatur eos inventore minus illum tenetur totam quidem enim qui natus hic sit! Obcaecati, excepturi.</p>
-                <blockquote>
-                    <cite> "I love pupies!" - Ramona, 2024</cite>
-                </blockquote>
-                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni repellendus sequi cupiditate quod laudantium voluptatem quaerat cumque, ipsum voluptates quas dolore maxime quia ratione nesciunt mollitia, sunt hic numquam? Nulla, exercitationem dolores porro repellendus atque rerum vero nostrum temporibus odio ea tenetur provident est doloremque non a ipsam facilis quas velit adipisci, reiciendis harum impedit corporis vel. Neque repudiandae sapiente vero culpa dolores? Sit excepturi voluptatum quia voluptate maxime libero iure, corporis explicabo minima eveniet perferendis cum et quisquam officiis.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dicta incidunt ipsum, iure illo labore enim ullam ipsa modi rerum eos nisi illum nulla cum velit quae accusamus omnis asperiores nihil! Consectetur eius inventore distinctio eveniet quisquam quas aperiam voluptates nulla molestias fugit, voluptatem reiciendis impedit quis odio quae sint cum doloremque soluta minus? Temporibus eius cum reiciendis blanditiis delectus non fugiat velit? Ab et officia nihil maiores atque, ex voluptatem iusto sint alias, asperiores ipsam error hic. Sapiente pariatur adipisci nam deserunt recusandae ratione incidunt rerum cumque quisquam eius commodi aliquid, magni facilis nihil consequatur, odit, quasi at eaque in ea possimus quibusdam? Doloribus, quis tempora! Ad voluptatum temporibus suscipit obcaecati perspiciatis laudantium hic ut sunt, nisi nulla dignissimos odio repellendus, ea cumque magni eius quidem. Et consequuntur doloremque aut praesentium, deserunt dicta aliquid, numquam voluptatibus quae, officiis modi suscipit omnis sed enim? Officiis velit quia unde ad maxime.</p>
-    
-    
-            </main>
-            <footer>
-                <h2>Author: Ramona-Irina Ciceu </h2>
-                <img src="https://placebear.com/100/100" alt="A profile pic of the bear">
-                <h3>Last posted: 26 August 2024</h3>
-                <a href="https://www.linkedin.com/feed/" target="_blank">Author's Profile</a>
-            </footer>
-        </article>
-        <article>
-            <header>
-                <!-- Article's header goes here -->
-                 <h2>All Amusing Facts About Dogs</h2>
-                 <h3>Read time: 100 minutes</h3>
-            
-            </header>
-            <main>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia asperiores quam maxime voluptatibus, optio, nam dolorem qui error architecto vero itaque vel corporis. Consequatur est nobis eius dolore voluptas fugit non sint sed sapiente fugiat vero in aut voluptate obcaecati eum, ipsum aperiam. Accusantium ab beatae incidunt sequi et optio error fugiat excepturi illum vero assumenda, tempore, ducimus voluptate, repellendus provident nobis ipsam. Eius ea vitae cupiditate sequi quidem ipsam. Praesentium repellat aperiam quasi iure deleniti sequi libero consectetur aut, necessitatibus nihil, veniam provident consequatur eos inventore minus illum tenetur totam quidem enim qui natus hic sit! Obcaecati, excepturi.</p>
-                <blockquote>
-                    <cite> "I love pupies!" - Ramona, 2024</cite>
-                </blockquote>
-                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni repellendus sequi cupiditate quod laudantium voluptatem quaerat cumque, ipsum voluptates quas dolore maxime quia ratione nesciunt mollitia, sunt hic numquam? Nulla, exercitationem dolores porro repellendus atque rerum vero nostrum temporibus odio ea tenetur provident est doloremque non a ipsam facilis quas velit adipisci, reiciendis harum impedit corporis vel. Neque repudiandae sapiente vero culpa dolores? Sit excepturi voluptatum quia voluptate maxime libero iure, corporis explicabo minima eveniet perferendis cum et quisquam officiis.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dicta incidunt ipsum, iure illo labore enim ullam ipsa modi rerum eos nisi illum nulla cum velit quae accusamus omnis asperiores nihil! Consectetur eius inventore distinctio eveniet quisquam quas aperiam voluptates nulla molestias fugit, voluptatem reiciendis impedit quis odio quae sint cum doloremque soluta minus? Temporibus eius cum reiciendis blanditiis delectus non fugiat velit? Ab et officia nihil maiores atque, ex voluptatem iusto sint alias, asperiores ipsam error hic. Sapiente pariatur adipisci nam deserunt recusandae ratione incidunt rerum cumque quisquam eius commodi aliquid, magni facilis nihil consequatur, odit, quasi at eaque in ea possimus quibusdam? Doloribus, quis tempora! Ad voluptatum temporibus suscipit obcaecati perspiciatis laudantium hic ut sunt, nisi nulla dignissimos odio repellendus, ea cumque magni eius quidem. Et consequuntur doloremque aut praesentium, deserunt dicta aliquid, numquam voluptatibus quae, officiis modi suscipit omnis sed enim? Officiis velit quia unde ad maxime.</p>
-    
-    
-            </main>
-            <footer>
-                <h2>Author: Ramona-Irina Ciceu </h2>
-                <img src="https://placebear.com/100/100" alt="A profile pic of the bear">
-                <h3>Last posted: 26 August 2024</h3>
-                <a href="https://www.linkedin.com/feed/" target="_blank">Author's Profile</a>
-            </footer>
-        </article>
-    </div>
-  <div>
-    <aside>
-        <section>
-            <h4>Filter by Month</h4>
-            <nav>
-                <ul>
-                    <li><a href="">Filter for January</a></li>
-                    <li><a href="">Filter for February</a></li>
-                    <li><a href="">Filter for March</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section>
-            <h4>Filter by Category</h4>
-            <nav>
-                <ul>
-                    <li><a href="">Puppies</a></li>
-                    <li><a href="">Dogs</a></li>
-                    <li><a href="">Cats</a></li>
-                    <li><a href="">Animals</a></li>
-                </ul>
-            </nav>
-        </section>
-    </aside>
-  </div>
-   
-<!-- main content of the website can go here  -->
- <hr>
-<h2>Sign up for the newsletter</h2>
-    <form action="" method="">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required>
-    <br>
-    <br>
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required>
-    <br>
-    <br>
-    <label for="email">Email:&nbsp;&nbsp;</label>
-    <input type="email" name="email" id="email">
 
-    <br><br>
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="password">
-    
-   <br><br>
-    <label for="favourite_animal">Favourite Animal:</label>
-    <input type="radio" name="favourite_animal" id="dog" value="dog">
-    <label for="dog">Dog</label>
-    <input type="radio" name="favourite_animal" id="cat" value="cat">
-    <label for="cat">Cat</label>
-    <input type="radio" name="favourite_animal" id="Horse" value="Horse">
-    <label for="Horse">Horse</label>
-
-    <br><br>
-    <label for="country">Country</label>
-    <select name="country" id="country">
-        <option value="england">England</option>
-        <option value="scotland">Scotland</option>
-        <option value="wales">Wales</option>
-        <option value="northen_ireland">Northen Ireland</option>
-    </select>
-<br><br>
-    <label for="bio">Biography:</label>
-    <br>
-    <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
-<br>
-    <input type="checkbox" name="subscribe" id="subscribe">
-    <label for="subscribe">Subscribe to our newsletter!</label>
-    <br>
-
-    <input type="submit" value="Send">
-
-</form>
-    <br>
-<hr>
-   </main>
-
-   <footer>
-     <!-- footer goes here  -->
-      <h2>BrightBlogSite</h2>
-        <section>
-            <nav>
-                <ul id="footer-ul">
-                    <div>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Carrers</a></li>
-                    </div>
-                   <div> 
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms and Conditions</a></li>
-                    <li><a href="">Cookies and Policies</a></li>
-                   </div>
-                   
-                </ul>
-            </nav>
-        </section>
-    </footer>
-    
-
+    <script src="script.js"></script>
 </body>
 </html>
