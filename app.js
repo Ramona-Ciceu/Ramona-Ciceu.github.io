@@ -49,7 +49,7 @@ function getWeatherData(city) {
 // Function to update the weather information on the page
 function updateWeatherInfo(data) {
     const today = new Date(); // Get current date
-    const dateString = today.toLocaleDateString(); // Format the date
+   // const dateString = today.toLocaleDateString(); // Format the date
 
     cityName.textContent = `City: ${data.location.name}`;
     dateElement.textContent = `Date: ${today}`;
