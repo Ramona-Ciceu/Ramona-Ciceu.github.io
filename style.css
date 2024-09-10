@@ -1,17 +1,36 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url('Stormclouds.jpg');
+  background-size: cover; 
   display: flex;
+  flex-direction: column;
+  min-width: 100vh;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: https://www.novascotia.com/travel-info/weather;
+  background-color: darkgreen;
+}
+header {
+display :block;
+width: 100%;
+font-size: 2em;
+text-align: center;
+padding: 20px;
+}
+footer {
+  display :block;
+width: 100%;
+font-size: 1em;
+text-align: center;
+padding: 20px;
 }
 
 .weather-container {
-  background-color: rgb(224, 151, 218);
-  padding: 50px;
-  border-radius: 16px;
+  background-color: rgb(9, 151, 167);
+  padding: 80px;
+  margin: 30px;
+  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -36,4 +55,10 @@ button:hover {
 
 #weather-info {
   margin-top: 20px;
+}
+
+#logo{
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
 }

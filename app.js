@@ -1,13 +1,16 @@
 // Your WeatherAPI.com API key
-const apiKey = '0433a80e18c54a0c807122134240609'; // Replace with your actual API key
+const apiKey = '40eed157c5f0493d9ff133245240609'; // Replace with your actual API key
 
 // Get references to HTML elements
 const searchButton = document.getElementById('search-button');
 const cityInput = document.getElementById('city-input');
 const cityName = document.getElementById('city-name');
+const dateElement = document.getElementById('date');
 const temperature = document.getElementById('temperature');
 const humidity = document.getElementById('humidity');
 const conditions = document.getElementById('conditions');
+const windSpeed = document.getElementById('wind-speed');
+const uvIndex = document.getElementById('uv-index');
 
 // Add an event listener to the search button
 searchButton.addEventListener('click', () => {
@@ -41,8 +44,14 @@ function getWeatherData(city) {
 
 // Function to update the weather information on the page
 function updateWeatherInfo(data) {
+    const today = new Date(); // Get current date
+    const dateString = today.toLocaleDateString(); // Format the date
+
     cityName.textContent = `City: ${data.location.name}`;
+    dateElement.textContent = `Date: ${dateString}`;
     temperature.textContent = `Temperature: ${data.current.temp_c} °C`;
     humidity.textContent = `Humidity: ${data.current.humidity}%`;
     conditions.textContent = `Conditions: ${data.current.condition.text}`;
+    windSpeed.textContent = `Wind Speed: ${data.current.wind_kph} kph`; 
+    uvIndex.textContent = `UV Index: ${data.current.uv}`; 
 }
