@@ -74,11 +74,11 @@ function updateForecastInfo(forecastData) {
 
         // Get the day of the week (e.g., Monday, Tuesday, etc.)
         const date = new Date(day.date);
-        const options = { weekday: 'long' }; // Get full day name
+        const options = { weekday: 'long' }; 
         const dayName = date.toLocaleDateString(undefined, options);
         const temp = `${day.day.avgtemp_c} °C`;
         const condition = day.day.condition.text;
-        const icon = `http:${day.day.condition.icon}`; // Ensure correct icon URL with http:
+        const icon = `https:${day.day.condition.icon}`; 
 
         forecastItem.innerHTML = `
             <p>${dayName}</p>
