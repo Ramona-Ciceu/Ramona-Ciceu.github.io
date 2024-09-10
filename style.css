@@ -11,15 +11,14 @@ body {
   margin: 0;
 }
 header {
-display :block;
+display: block;
 width: 60%;
 font-size: 2em;
 text-align: center;
-padding: 10px;
-position: top, fixed;
+padding: 20px;
 }
 footer {
-  display :block;
+display :block;
 width: 100%;
 font-size: 1em;
 text-align: center;
@@ -30,7 +29,7 @@ padding: 20px;
 .weather-container {
   background-color: rgb(9, 151, 167);
   padding: 50px;
-  margin: 0;
+  margin: auto;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -61,6 +60,7 @@ button:hover {
 #logo{
   width: 40px;
   margin-right: 10px;
+  height: auto;
 }
 
 
@@ -74,7 +74,7 @@ button:hover {
   /* 5 columns for 5 days */
   grid-template-columns: repeat(5, 1fr); 
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .forecast-item {
