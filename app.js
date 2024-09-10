@@ -11,6 +11,7 @@ const humidity = document.getElementById('humidity');
 const conditions = document.getElementById('conditions');
 const windSpeed = document.getElementById('wind-speed');
 const uvIndex = document.getElementById('uv-index');
+const forecastGrid = document.getElementById('forecast-grid');
 
 // Add an event listener to the search button
 searchButton.addEventListener('click', () => {
@@ -25,7 +26,7 @@ searchButton.addEventListener('click', () => {
 // Function to fetch weather data
 function getWeatherData(city) {
     // API URL with city and API key
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no`;
 
     fetch(url)
         .then(response => {
@@ -36,6 +37,7 @@ function getWeatherData(city) {
         })
         .then(data => {
             updateWeatherInfo(data);
+            updateForecastInfo(data.forecast.forecastday);
         })
         .catch(error => {
             alert(error.message);
@@ -48,10 +50,42 @@ function updateWeatherInfo(data) {
     const dateString = today.toLocaleDateString(); // Format the date
 
     cityName.textContent = `City: ${data.location.name}`;
-    dateElement.textContent = `Date: ${dateString}`;
+    dateElement.textContent = `Date: ${today}`;
     temperature.textContent = `Temperature: ${data.current.temp_c} °C`;
     humidity.textContent = `Humidity: ${data.current.humidity}%`;
     conditions.textContent = `Conditions: ${data.current.condition.text}`;
     windSpeed.textContent = `Wind Speed: ${data.current.wind_kph} kph`; 
     uvIndex.textContent = `UV Index: ${data.current.uv}`; 
+}
+
+// Function to update the 5-day forecast
+function updateForecastInfo(forecastData) {
+    const forecastGrid = document.getElementById('forecast-grid');
+    if (!forecastGrid) {
+        console.error('Element with ID forecast-grid not found');
+        return;
+    }
+    forecastGrid.innerHTML = ''; // Clear previous forecast
+
+    forecastData.forEach(day => {
+        const forecastItem = document.createElement('div');
+        forecastItem.classList.add('forecast-item');
+
+        // Get the day of the week (e.g., Monday, Tuesday, etc.)
+        const date = new Date(day.date);
+        const options = { weekday: 'long' }; // Get full day name
+        const dayName = date.toLocaleDateString(undefined, options);
+        const temp = `${day.day.avgtemp_c} °C`;
+        const condition = day.day.condition.text;
+        const icon = `http:${day.day.condition.icon}`; // Ensure correct icon URL with http:
+
+        forecastItem.innerHTML = `
+            <p>${dayName}</p>
+            <img src="${icon}" alt="${condition}">
+            <p>Temp: ${temp}</p>
+            <p>${condition}</p>
+        `;
+
+        forecastGrid.appendChild(forecastItem);
+    });
 }
