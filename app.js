@@ -1,5 +1,5 @@
 // Your WeatherAPI.com API key
-const apiKey = '40eed157c5f0493d9ff133245240609'; // Replace with your actual API key
+const apiKey = '40eed157c5f0493d9ff133245240609'; 
 
 // Get references to HTML elements
 const searchButton = document.getElementById('search-button');
@@ -48,8 +48,9 @@ function getWeatherData(city) {
 
 // Function to update the weather information on the page
 function updateWeatherInfo(data) {
-    const today = new Date(); // Get current date
-   // const dateString = today.toLocaleDateString(); // Format the date
+    // Get current date
+    const today = new Date(); 
+  
 
     cityName.textContent = `City: ${data.location.name}`;
     dateElement.textContent = `Date: ${today}`;
@@ -67,7 +68,8 @@ function updateForecastInfo(forecastData) {
         console.error('Element with ID forecast-grid not found');
         return;
     }
-    forecastGrid.innerHTML = ''; // Clear previous forecast
+    // Clear previous forecast
+    forecastGrid.innerHTML = ''; 
 
     forecastData.forEach(day => {
         const forecastItem = document.createElement('div');
