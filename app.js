@@ -40,7 +40,8 @@ function getWeatherData(city) {
             updateForecastInfo(data.forecast.forecastday);
         })
         .catch(error => {
-            alert(error.message);
+            console.error('There was a problem with the fetch operation:', error);
+            alert('Failed to fetch weather data. Please try again.');
         });
 }
 
