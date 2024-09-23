@@ -1,5 +1,5 @@
 // Your WeatherAPI.com API key
-const apiKey = '35af16ef12d272464742b28c9daca2bd'; 
+const apiKey = 'eeabea20fd7ad529a49744adc1588c38'; 
 
 // Get references to HTML elements
 const searchButton = document.getElementById('search-button');
