@@ -26,7 +26,7 @@ searchButton.addEventListener('click', () => {
 // Function to fetch weather data
 function getWeatherData(city) {
     // API URL with city and API key
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no`;
+    const url = 'https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no';
 
 
     fetch(url)
